@@ -5,7 +5,7 @@ name:                tripLL
 version:             0.1.0.0
 synopsis:            A very simple triple store
 -- description:
-homepage:            hax-f.net/lambda/tripLL
+homepage:            https://github.com/aphorisme/tripLL
 license:             MIT
 license-file:        LICENSE
 author:              Philipp Pfeiffer

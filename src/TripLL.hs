@@ -1,5 +1,15 @@
 {-# LANGUAGE OverloadedStrings, MultiParamTypeClasses, FunctionalDependencies #-}
+{-|
+Module      : TripLL
+Description : The tripLL interface.
+Copyright   : (c) Philipp Pfeiffer, 2015
+License     : MIT
+Maintainer  : pfiff@hax-f.net
+Stability   : experimental
+Portability : POSIX
 
+Gives a basic interface to a triple store. See homepage for an example.
+-}
 module TripLL (
   -- * Base Types for Accesing and Querying
   Triplestore (..),
@@ -13,6 +23,7 @@ module TripLL (
 ----- System: -----
 import System.FilePath
 
+-- | The 'Triplestore' typeclass is an interface for triple stores. Every backend of this library uses this interface.
 class Triplestore h b | h -> b where
   -- | most simple actions, a triple store has to support, 'put' and 'del' of triples:
   put      :: Triple b -> h -> IO ()

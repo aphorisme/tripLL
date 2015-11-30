@@ -2,7 +2,17 @@
               , OverloadedStrings
               , MultiParamTypeClasses
               , FlexibleInstances #-}
+{-|
+Module      : TripLL.Bindings.LevelDBHexa
+Description : An implementation for the tripLL interface.
+Copyright   : (c) Philipp Pfeiffer, 2015
+License     : MIT
+Maintainer  : pfiff@hax-f.net
+Stability   : experimental
+Portability : POSIX
 
+Gives an implementation for the tripLL interface based upon the `LevelDB` database.
+-}
 module TripLL.Bindings.LevelDBHexa (
 
   -- * Base Types
@@ -31,6 +41,7 @@ import Control.Monad
 -------------
 -- Base Types
 -------------
+-- | The main handle of this implementation, 'LevelDBHexa'.
 type LevelDBHexa = LDB.DB
 type ByTriple = Triple BS.ByteString
 type QueryByTriple = QueryTriple BS.ByteString
